@@ -8,7 +8,7 @@ import path from "path";
 const __filename = fileURLToPath(import.meta.url);// use this to save all the urls into the same data.json file not into different.
 const __dirname = path.dirname(__filename);
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const DATA_FILE = path.join(__dirname,"data", "data.json");
 
 const serveFile = async (res, filePath, contentType) => {
